@@ -7,8 +7,8 @@ services:
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: rootpassword  # Root password for administration
-            MYSQL_USER: amir_jlr  # ✅ Single user for all databases
-            MYSQL_PASSWORD: Amir_jlr24  # ✅ Shared password
+            MYSQL_USER: myuser  # ✅ Single user for all databases
+            MYSQL_PASSWORD: mypassword  # ✅ Shared password
         ports:
             - "4406:3306"
         volumes:
