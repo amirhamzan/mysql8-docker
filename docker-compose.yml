@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+    mysql:
+        image: mysql:8.0
+        container_name: mysql_local_4406
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: rootpassword  # Root password for administration
+            MYSQL_USER: amir_jlr  # ✅ Single user for all databases
+            MYSQL_PASSWORD: Amir_jlr24  # ✅ Shared password
+        ports:
+            - "4406:3306"
+        volumes:
+            - mysql_data_jlr_db:/var/lib/mysql
+            - ./mysql-config/my.cnf:/etc/mysql/my.cnf  # ✅ Mount custom MySQL config
+
+
+volumes:
+    mysql_data_jlr_db:
